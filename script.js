@@ -5,7 +5,8 @@ async function generateSunTimes() {
 
     let myURL = await fetch(baseURL + "lat=" + myLatitude + "&lng=" + myLongitude + "&date=today")
         .then(response => response.json());
-    console.log(myURL.results.sunrise);
+    let sunRiseTime = myURL.results.sunrise;
+    let sunSetTime = myURL.results.sunset;
+    console.log(sunRiseTime);
+    console.log(sunSetTime);
 }
-
-generateSunTimes()
