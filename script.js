@@ -3,9 +3,9 @@ async function generateSunTimes() {
     let myLatitude = 36.72;
     let myLongitude = -4.42;
 
-    var myURL = await fetch(baseURL + "lat=" + myLatitude + "&lng=" + myLongitude + "&date=today")
+    let myURL = await fetch(baseURL + "lat=" + myLatitude + "&lng=" + myLongitude + "&date=today")
         .then(response => response.json());
-    console.log(myURL.results);
+    console.log(myURL.results.sunrise);
 }
 
 generateSunTimes()
