@@ -22,3 +22,7 @@ var btn = document.getElementById('solarButton');
 btn.addEventListener('click', () => {
     generateSunTimes();
 });
+
+btn.addEventListener('click', () => {
+
+});
