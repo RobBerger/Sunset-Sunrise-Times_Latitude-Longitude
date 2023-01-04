@@ -1,18 +1,18 @@
-let baseURL = "https://api.sunrise-sunset.org/json?";
-let myLatitude = 36.72;
-let myLongitude = -4.42;
+// let baseURL = "https://api.sunrise-sunset.org/json?";
+// let myLatitude = 36.72;
+// let myLongitude = -4.42;
 
-async function generateSunTimes() {
-    let myURL = await fetch(baseURL + "lat=" + myLatitude + "&lng=" + myLongitude + "&date=today")
-        .then(response => response.json());
-    let sunRiseTime = myURL.results.sunrise;
-    let sunSetTime = myURL.results.sunset;
-    console.log(sunRiseTime);
-    console.log(sunSetTime);
-}
+// async function generateSunTimes() {
+//     let myURL = await fetch(baseURL + "lat=" + myLatitude + "&lng=" + myLongitude + "&date=today")
+//         .then(response => response.json());
+//     let sunRiseTime = myURL.results.sunrise;
+//     let sunSetTime = myURL.results.sunset;
+//     console.log(sunRiseTime);
+//     console.log(sunSetTime);
+// }
 
-var dumbBtn = document.getElementById('SolarButton');
+var btn = document.getElementById('solarButton');
 
-dumbBtn.addEventListener('click', () => {
-    generateSunTimes();
+btn.addEventListener('click', () => {
+    console.log('Test');
 });
