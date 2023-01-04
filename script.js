@@ -15,14 +15,24 @@ async function generateSunTimes() {
     console.log(myLongitude);
     console.log(sunRiseTime);
     console.log(sunSetTime);
-}
+
+    function generateSunrise() {
+        const sunrise = document.createElement('p');
+        sunrise.innerHTML = 'Sunrise: ' + sunRiseTime;
+        document.body.appendChild(sunrise);
+     }
+     generateSunrise()
+
+      function generateSunset() {
+        const sunset = document.createElement('p');
+        sunset.innerHTML = 'Sunset: ' + sunSetTime;
+        document.body.appendChild(sunset);
+      }
+      generateSunset()
+};
 
 var btn = document.getElementById('solarButton');
 
 btn.addEventListener('click', () => {
     generateSunTimes();
-});
-
-btn.addEventListener('click', () => {
-
 });
